@@ -7,7 +7,7 @@ This repository provides scripts and documentation for installing and using Clau
 ```bash
 git clone https://github.com/rafstahelin/claude-code
 cd claude-code
-chmod +x install.sh
+chmod +x *.sh
 ./install.sh
 source ~/.bashrc
 ```
@@ -91,6 +91,41 @@ ComfyUI/input/**
 
 These patterns help Claude Code avoid scanning large files/directories that are common in ML workloads, improving performance and reducing token usage.
 
+## Project Templates
+
+This repository includes ML-specific CLAUDE.md templates to quickly initialize your projects:
+
+```bash
+# List available templates
+./init-project.sh --list
+
+# Initialize with a specific template
+./init-project.sh CLAUDE-EASY-CLI
+
+# Or use the interactive menu
+./init-project.sh
+```
+
+Available templates:
+- **Generic ML project** - Basic ML project structure
+- **Easy CLI** - Specific for Easy CLI development
+- **ComfyUI download** - For ComfyUI workflow management
+
+## Advanced Configuration
+
+For fine-tuning your Claude Code installation:
+
+```bash
+# Run the configuration utility
+./configure.sh
+```
+
+The configuration utility provides:
+- Display of current ignore patterns
+- Adding new ignore patterns
+- Resetting to default patterns
+- Viewing full configuration
+
 ## Performance Tips for RunPod
 
 1. **Add More Ignore Patterns** if needed:
@@ -138,3 +173,7 @@ To uninstall Claude Code:
 
 4. **Scan taking too long**:
    Press `Esc` to interrupt
+
+## License
+
+MIT
